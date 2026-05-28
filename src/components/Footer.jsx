@@ -26,13 +26,13 @@ export default function Footer() {
             </h2>
           </div>
           <div className="footer-right">
-            <a href="mailto:contact@andicleopatra.dev" className="footer-email">
-              contact@andicleopatra.dev
+            <a href="mailto:andicleomj@gmail.com" className="footer-email">
+              andicleomj@gmail.com
             </a>
             <div className="social-links">
               <a href="https://linkedin.com/in/andicleopatramaryamjamila/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="#">GitHub</a>
-              <a href="#">Twitter</a>
+              <a href="https://github.com/Andicleomj">GitHub</a>
+              <a href="https://www.instagram.com/_cleopatraaaa23?igsh=MWtuNDliaHV1MnhuYw==">Instagram</a>
             </div>
           </div>
         </div>
