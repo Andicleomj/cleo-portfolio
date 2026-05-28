@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import './Hero.css'
+import heroImage from '../assets/hero.jpeg'
 
 export default function Hero() {
   const sectionRef = useRef(null)
@@ -39,7 +40,7 @@ export default function Hero() {
 
       <div className="hero-right">
         <div className="image-container">
-          <div className="swirl" />
+          <img src={heroImage} alt="Andi Cleopatra Maryam Jamila" className="hero-img" />
           <div className="status-badge">
             <p>Based in Jakarta</p>
             <p>Available for freelance</p>
@@ -49,3 +50,4 @@ export default function Hero() {
     </section>
   )
 }
+
