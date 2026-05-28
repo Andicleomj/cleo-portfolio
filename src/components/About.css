@@ -1,0 +1,38 @@
+.about-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10rem 4rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-statement {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 1.25;
+  max-width: 1100px;
+  margin: 0 auto;
+  letter-spacing: -1px;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 400;
+  color: #d1d5db;
+}
+
+@media (max-width: 992px) {
+  .about-section { padding: 6rem 2rem; }
+  .about-statement { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .about-statement { font-size: 1.8rem; }
+}

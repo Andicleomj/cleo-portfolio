@@ -1,0 +1,113 @@
+.footer {
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 8rem 4rem 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 8rem;
+}
+
+.footer-left h2 {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 400;
+  color: #d1d5db;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.footer-email {
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-bottom: 1px solid var(--text-primary);
+  padding-bottom: 0.2rem;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-email:hover {
+  color: #818cf8;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.social-links a {
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--text-primary);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+
+.back-top {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-top:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 992px) {
+  .footer-inner { padding: 4rem 2rem 2rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 4rem; }
+  .footer-left h2 { font-size: 2.5rem; }
+  .footer-right { align-items: flex-start; }
+}
+
+@media (max-width: 768px) {
+  .footer-left h2 { font-size: 2rem; }
+  .footer-email { font-size: 1.1rem; }
+}

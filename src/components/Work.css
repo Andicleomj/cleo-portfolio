@@ -1,0 +1,108 @@
+.work-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 6rem 4rem;
+}
+
+/* Section header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.section-counter {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Work list */
+.work-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 200px 1fr 50px;
+  align-items: center;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  /* entrance anim */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.work-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease, padding 0.4s ease, background-color 0.4s ease;
+}
+
+.work-item:nth-child(2).visible { transition-delay: 0.1s; }
+.work-item:nth-child(3).visible { transition-delay: 0.2s; }
+
+.work-item:hover {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.work-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.work-name {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+.work-brief {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.work-arrow {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.work-item:hover .work-arrow {
+  transform: translate(5px, -5px);
+  color: var(--text-primary);
+}
+
+@media (max-width: 992px) {
+  .work-section { padding: 4rem 2rem; }
+  .work-item { grid-template-columns: 1fr; gap: 1rem; padding: 2rem 0; }
+  .work-name { font-size: 2.5rem; }
+  .work-arrow { display: none; }
+}
+
+@media (max-width: 768px) {
+  .section-title { font-size: 2rem; }
+  .work-name { font-size: 2rem; }
+}
