@@ -43,7 +43,7 @@ export default function Hero() {
           <img src={heroImage} alt="Andi Cleopatra Maryam Jamila" className="hero-img" />
           <div className="status-badge">
             <p>Based in Jakarta</p>
-            <p>Available for freelance</p>
+            {/* <p>Available for freelance</p> */}
           </div>
         </div>
       </div>

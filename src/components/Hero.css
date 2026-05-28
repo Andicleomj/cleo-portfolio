@@ -11,19 +11,7 @@
   overflow: hidden;
 }
 
-/* Ambient glow */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -15%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: rgba(99, 102, 241, 0.08);
-  filter: blur(120px);
-  pointer-events: none;
-}
+
 
 /* Entrance animation */
 .hero {
@@ -92,7 +80,6 @@
   max-width: 550px;
   aspect-ratio: 4 / 5;
   border-radius: 12px;
-  border: 1px solid var(--border);
   overflow: hidden;
 }
 
@@ -101,6 +88,13 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  animation: float-softly 6s ease-in-out infinite;
+}
+
+@keyframes float-softly {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
 .image-container:hover .hero-img {
@@ -110,9 +104,8 @@
 .status-badge {
   position: absolute;
   bottom: 24px;
-  left: -1px;
-  background: rgba(10, 10, 10, 0.92);
-  border: 1px solid var(--border);
+  left: 0;
+  background: rgba(253, 251, 251, 0.92);
   padding: 1.25rem 1.75rem;
   border-radius: 0 4px 4px 0;
   backdrop-filter: blur(10px);

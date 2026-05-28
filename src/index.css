@@ -2,10 +2,11 @@
    Global Reset & Design Tokens
    ========================================================================== */
 :root {
-  --bg: #0a0a0a;
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
-  --border: rgba(255, 255, 255, 0.12);
+  --bg: #fdfbfb;
+  --text-primary: #4a3b3c;
+  --text-secondary: #8d7b7e;
+  --border: rgba(140, 110, 115, 0.15);
+  --accent: #d9a0a8;
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'Space Mono', monospace;
